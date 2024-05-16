@@ -20,6 +20,7 @@ public class Upgrade : MonoBehaviour
     public int price = 10;
     public Text upgradeText;
     public Text priceText;
+   
     void Start()
     {
         
@@ -42,4 +43,5 @@ public class Upgrade : MonoBehaviour
             price = price * GlobalVariables.tikArt;
         }
     }
+    
 }

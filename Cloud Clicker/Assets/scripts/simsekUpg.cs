@@ -3,25 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-// Simsek icin upgrade scripti
-
-
 public class simsekUpg : MonoBehaviour
-
 {
     public int upgrade;
     public int price = 20;
     public Text upgradeText;
     public Text priceText;
     private int i = 1;
+    public GameObject effect;
+
     void Start()
     {
-
     }
 
-
-    private void Update()
+    void Update()
     {
         upgradeText.text = upgrade.ToString();
         priceText.text = price.ToString();
@@ -36,6 +31,18 @@ public class simsekUpg : MonoBehaviour
             GlobalVariables.otoTik++;
             price *= GlobalVariables.otoTik + i;
             i = 0;
+
+            PlayEffect();
         }
+    }
+
+    private void PlayEffect()
+    {
+        // Efekti aktif yapmadan önce eðer zaten aktifse kapatýp tekrar aç
+        if (effect.activeInHierarchy)
+        {
+            effect.SetActive(false);
+        }
+        effect.SetActive(true);
     }
 }
