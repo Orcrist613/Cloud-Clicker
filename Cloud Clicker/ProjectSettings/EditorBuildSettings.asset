@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/eskiSahne.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main_Menu.unity
+    guid: 14b27e73c346e7c4aa14cdee71aab0b5
+  - enabled: 1
+    path: Assets/Scenes/yeniSahne.unity
+    guid: 3287b9a7d314eca4da89bfd8316f6730
   m_configObjects: {}
